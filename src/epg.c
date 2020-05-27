@@ -1742,26 +1742,26 @@ epg_broadcast_t *epg_broadcast_deserialize
 
 #define C_ (const char *[])
 static const char **_epg_genre_names[16][16] = {
-  { /* 00 */
+  { /* 0x0 undefined content*/
     C_{ "", NULL  }
   },
-  { /* 01 */
+  { /* 0x1 movie/drama (general)*/
     C_{ N_("Movie"), N_("Drama"), NULL },
-    C_{ N_("Detective"), N_("Thriller"), NULL },
-    C_{ N_("Adventure"), N_("Western"), N_("War"), NULL },
-    C_{ N_("Science fiction"), N_("Fantasy"), N_("Horror"), NULL },
-    C_{ N_("Comedy"), NULL },
-    C_{ N_("Soap"), N_("Melodrama"), N_("Folkloric"), NULL },
-    C_{ N_("Romance"), NULL },
-    C_{ N_("Serious"), N_("Classical"), N_("Religious"), N_("Historical movie"), N_("Drama"), NULL },
-    C_{ N_("Adult movie"), N_("Drama"), NULL },
-    C_{ N_("Movie / drama"), NULL },
-    C_{ N_("Movie / drama"), NULL },
-    C_{ N_("Movie / drama"), NULL },
-    C_{ N_("Movie / drama"), NULL },
-    C_{ N_("Movie / drama"), NULL },
-    C_{ N_("Movie / drama"), NULL },
-    C_{ N_("Movie / drama"), NULL },
+    C_{ N_("Movie"), N_("Drama"), N_("Detective"), N_("Thriller") },
+    C_{ N_("Movie"), N_("Drama"), N_("Adventure"), N_("Western"), N_("War") },
+    C_{ N_("Movie"), N_("Drama"), N_("Science fiction"), N_("Fantasy"), N_("Horror") },
+    C_{ N_("Movie"), N_("Drama"), N_("Comedy") },
+    C_{ N_("Movie"), N_("Drama"), N_("Soap"), N_("Melodrama"), N_("Folkloric") },
+    C_{ N_("Movie"), N_("Drama"), N_("Romance") },
+    C_{ N_("Movie"), N_("Drama"), N_("Serious"), N_("Classical"), N_("Religious"), N_("Historical movie"), N_("Drama") },
+    C_{ N_("Movie"), N_("Drama"), N_("Adult movie"), N_("Drama") },
+    C_{ N_("Movie"), N_("Drama"), N_("Reserved for Future Use") },
+    C_{ N_("Movie"), N_("Drama"), N_("Reserved for Future Use") },
+    C_{ N_("Movie"), N_("Drama"), N_("Reserved for Future Use") },
+    C_{ N_("Movie"), N_("Drama"), N_("Reserved for Future Use") },
+    C_{ N_("Movie"), N_("Drama"), N_("Reserved for Future Use") },
+    C_{ N_("Movie"), N_("Drama"), N_("Reserved for Future Use") },
+    C_{ N_("Movie"), N_("Drama"), N_("User Defined") },
   },
   { /* 02 */
     C_{ N_("News"), N_("Current affairs"), NULL },
@@ -1907,7 +1907,7 @@ static const char **_epg_genre_names[16][16] = {
     C_{ N_("Education / Science / Factual topics"), NULL },
     C_{ N_("Education / Science / Factual topics"), NULL },
   },
-  { /* 10 */
+  { /* 0A */
     C_{ N_("Leisure hobbies"), NULL },
     C_{ N_("Tourism / Travel"), NULL },
     C_{ N_("Handicraft"), NULL },
@@ -1924,6 +1924,24 @@ static const char **_epg_genre_names[16][16] = {
     C_{ N_("Leisure hobbies"), NULL },
     C_{ N_("Leisure hobbies"), NULL },
     C_{ N_("Leisure hobbies"), NULL },
+  },
+  { /* 0F */
+    C_{ N_("Drama"), NULL },
+    C_{ N_("Detective / Thriller"), NULL },
+    C_{ N_("Adventure / Western / War"), NULL },
+    C_{ N_("Science fiction / Fantasy / Horror"), NULL },
+    C_{ N_("Comedy"), NULL },
+    C_{ N_("Soap / Melodrama / Folkloric"), NULL },
+    C_{ N_("Romance"), NULL },
+    C_{ N_("Serious / Classical / Religion / Historical"), NULL },
+    C_{ N_("Adult"), NULL },
+    C_{ N_("user defined"), NULL },
+    C_{ N_("user defined"), NULL },
+    C_{ N_("user defined"), NULL },
+    C_{ N_("user defined"), NULL },
+    C_{ N_("user defined"), NULL },
+    C_{ N_("user defined"), NULL },
+    C_{ N_("user defined"), NULL },
   }
 };
 
